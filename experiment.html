@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <title>My experiment</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="noUiSlider.9.0.0/nouislider.js"></script>
+        <script src="jspsych-5.0/jspsych.js"></script>
+        <link href="jspsych-5.0/css/jspsych.css" rel="stylesheet" type="text/css"></link>
+        <script src="jspsych-uncertain-slider.js"></script>
+        <link href="noUiSlider.9.0.0/nouislider.css" rel="stylesheet" type="text/css"></link>
+        <link href="noUiSlider.9.0.0/nouislider.min.css" rel="stylesheet" type="text/css"></link>
+    </head>
+    <body>
+    </body>
+    <script>
+
+    var hello_trial = {
+        type: 'multirange-slider',
+        prompt: '<p>Hello world!<p>',
+        stimulus: 'img/blue.png',
+    };
+
+    jsPsych.init({
+        timeline: [ hello_trial ],
+        on_finish: function() {
+          jsPsych.data.displayData();
+        }
+    });
+
+    </script>
+</html>
